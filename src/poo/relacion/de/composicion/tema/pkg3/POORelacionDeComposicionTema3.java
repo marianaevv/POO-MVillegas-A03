@@ -20,9 +20,8 @@ public class POORelacionDeComposicionTema3 {
                 
                 starTac.EA.presionar();
                 System.out.println ("el starTac esta "+ starTac.EA.IO);
-                System.out.println (starTac.Teclado [4][3].getDigito());
-                 starTac.setTeclado();
-        
+                starTac.setTeclado();
+        //Ciclos que recorren toda la matriz
         for (int i = 0; i < 5; i++) { 
             for (int j = 0; j < 3; j++) {
                 System.out.print(starTac.Teclado[i][j].getDigito() + " ");

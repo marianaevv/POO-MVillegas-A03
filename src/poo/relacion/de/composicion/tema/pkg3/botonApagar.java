@@ -12,9 +12,14 @@ package poo.relacion.de.composicion.tema.pkg3;
 public class botonApagar {
     //Atributos
     public Boolean IO;
+    
+    //constructor
     public botonApagar(){
         this.IO = false;
     }
+    /**
+     * Metodo que apaga o enciende dependiendo de el estado del telefono
+     */
     public void presionar (){
         {
         this.IO = !this.IO;

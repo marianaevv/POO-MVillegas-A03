@@ -16,7 +16,7 @@ public class Telefono {
     public void setTeclado (){
         int digito=0;
         String g;
-        for (int i = 0; i < (Teclado.length -1); i++) {
+        for (int i = 0; i < (Teclado.length -1); i++) { //Ciclo que recorrera la matriz 
             for (int j = 0; j < Teclado[0].length; j++) {
                 Tecla aux=new Tecla(); //Dentro del for creamos el auxiliar para que en cada ciclo se cree un nuevo auxiliar
                 digito++;
