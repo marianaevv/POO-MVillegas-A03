@@ -13,7 +13,71 @@ public class Telefono {
 //Atributo, instanciar objeto
     botonApagar  EA = new botonApagar(); //por default es publico
     Tecla [][] Teclado = new Tecla [5][3];
-    public void setTeclado (){
+     public static Contacto [] agendaTel = new Contacto [100];
+    
+        public Telefono (){
+        //inicializaTeclado ();
+        
+       }
+        
+         /**
+         * Metodo que guarda los contactos nuevos temporalmente
+         * @param nombre nombre del contacto
+         * @param tel telefono del contacto
+         * @param correo email del contacto
+         */
+        public static void nuevoContacto (String nombre, String tel, String correo){
+            Contacto temp = new Contacto(nombre, tel, correo);
+            agregarContacto(temp);
+            
+        }
+        /**
+         * Metodo que checa si la lista de contacto esta llena y si no, agrega el contacto a la agenda
+         * @param nuevo 
+         */
+        public static void agregarContacto (Contacto nuevo){
+            int i = ultimo(agendaTel);
+            if (i==100){
+                System.out.println("La lista de contactos esta llena");
+            }else{
+                agendaTel[i]= nuevo;
+            }
+        }
+        /**
+         * Metodo que revisa si la posicion esta vacia y si lo esta devuelve la posicion
+         * @param agenda
+         * @return entero
+         */
+        private static int ultimo (Contacto [] agenda){
+            int i = 0;
+            while (agenda [i]!= null){
+                i++;
+            }
+                if (1<agenda.length -1){
+                    return i;
+                }
+            return 100;
+        }
+         /**
+          * Metodo que obtiene los valores del contacto y los muestra
+          * @param i
+          * @return cadena de caracteres
+          */       
+        
+        public static String mostrarContacto (int i){
+        if (agendaTel [i]!= null){
+            System.out.println ("La informacion del contacto" +  i  + "es");
+            return
+                    agendaTel[i].getNombre()+
+                    agendaTel[i].getNumero()+
+                    agendaTel[i].getCorreo();
+        }else{
+          return "El contacto no existe dentro de la agenda" + i;
+        }
+        }
+                               
+               
+    public void setTeclado(){
         int digito=0;
         String g;
         for (int i = 0; i < (Teclado.length -1); i++) { //Ciclo que recorrera la matriz 
@@ -46,9 +110,8 @@ public class Telefono {
         Tecla aux6=new Tecla();
         aux6.setDigito('R');
         Teclado[4][2]=aux6;
-        
-        }       
-        
+    }
+               
             
         }
  
