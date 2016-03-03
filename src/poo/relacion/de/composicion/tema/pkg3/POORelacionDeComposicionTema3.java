@@ -16,8 +16,21 @@ public class POORelacionDeComposicionTema3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Telefono starTac = new Telefono ();
-                
+        
+       Telefono starTac = new Telefono ();  
+       Telefono.nuevoContacto ("Luisa", "8331234567", "luisa14@hotmail.com");
+       System.out.println(Telefono.mostrarContacto(0));
+       Telefono.nuevoContacto  ("Carlos","8332222222","carlos@hotmail.com");
+       System.out.println(Telefono.mostrarContacto(1));
+       Telefono.nuevoContacto  ("Juan","8333333333", "juan@hotmail.com");
+       System.out.println(Telefono.mostrarContacto(2));
+        Telefono.nuevoContacto  ("Mariana","8334444444","mariana@hotmail.com");
+        System.out.println(Telefono.mostrarContacto(3));
+        Telefono.nuevoContacto  ("Jesus","8335555555","jesus@hotmail.com");
+       System.out.println(Telefono.mostrarContacto(4));
+       System.out.println(Telefono.mostrarContacto(80));
+       
+                    
                 starTac.EA.presionar();
                 System.out.println ("el starTac esta "+ starTac.EA.IO);
                 starTac.setTeclado();
@@ -28,6 +41,8 @@ public class POORelacionDeComposicionTema3 {
             }
             System.out.println("");
         }
+
+        
         
        }
     
